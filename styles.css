@@ -6,35 +6,17 @@
 
 body {
     font-family: 'Hiragino Sans', 'Noto Sans JP', sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: transparent;
     min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-}
-
-.phone-container {
-    width: 375px;
-    height: 667px;
-    background: white;
-    border-radius: 30px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-    overflow: hidden;
-    position: relative;
-}
-
-.screen {
-    width: 100%;
-    height: 100%;
+    margin: 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
-    position: relative;
 }
 
 .header {
     background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
-    padding: 50px 20px 20px;
+    padding: 20px 20px 20px;
     color: white;
     text-align: center;
     position: relative;
@@ -42,7 +24,7 @@ body {
 
 .back-btn {
     position: absolute;
-    top: 50px;
+    top: 20px;
     left: 20px;
     background: rgba(255,255,255,0.3);
     border: none;
@@ -74,7 +56,7 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    padding: 40px 20px;
+    padding: 20px;
 }
 
 .menu-item {
