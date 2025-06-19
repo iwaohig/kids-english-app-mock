@@ -1,0 +1,312 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Hiragino Sans', 'Noto Sans JP', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.phone-container {
+    width: 375px;
+    height: 667px;
+    background: white;
+    border-radius: 30px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    overflow: hidden;
+    position: relative;
+}
+
+.screen {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.header {
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+    padding: 50px 20px 20px;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.back-btn {
+    position: absolute;
+    top: 50px;
+    left: 20px;
+    background: rgba(255,255,255,0.3);
+    border: none;
+    border-radius: 20px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+}
+
+.header h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+/* メインメニュー */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 40px 20px;
+}
+
+.menu-item {
+    background: white;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.2s;
+    text-decoration: none;
+    color: inherit;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+}
+
+.menu-icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.menu-text {
+    font-size: 14px;
+    color: #333;
+}
+
+/* 共通カード */
+.card {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.card-subtitle {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* 授業予定 */
+.schedule-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.schedule-item:last-child {
+    border-bottom: none;
+}
+
+.schedule-time {
+    background: #ff9a9e;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 12px;
+    margin-right: 15px;
+    min-width: 60px;
+    text-align: center;
+}
+
+.schedule-info h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.schedule-info p {
+    font-size: 12px;
+    color: #666;
+}
+
+/* 宿題確認 */
+.homework-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.homework-item:last-child {
+    border-bottom: none;
+}
+
+.homework-status {
+    padding: 5px 15px;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.status-done {
+    background: #d4edda;
+    color: #155724;
+}
+
+.status-pending {
+    background: #fff3cd;
+    color: #856404;
+}
+
+/* 成績確認 */
+.grade-chart {
+    height: 200px;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.grade-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.grade-item:last-child {
+    border-bottom: none;
+}
+
+.grade-score {
+    font-weight: bold;
+    color: #ff9a9e;
+}
+
+.badge-container {
+    text-align: center;
+    font-size: 40px;
+    padding: 20px;
+}
+
+/* お知らせ */
+.notice-date {
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 5px;
+}
+
+.notice-content {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.notice-important {
+    border-left: 4px solid #ff9a9e;
+    background: #fff5f5;
+}
+
+/* 予約状況 */
+.booking-calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.calendar-day {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-size: 12px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.calendar-header {
+    background: #f8f9fa;
+    color: #666;
+    cursor: default;
+}
+
+.calendar-available {
+    background: #d4edda;
+    color: #155724;
+}
+
+.calendar-booked {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.calendar-today {
+    background: #ff9a9e;
+    color: white;
+}
+
+.calendar-legend {
+    font-size: 12px;
+    color: #666;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* イベント情報 */
+.event-image {
+    width: 100%;
+    height: 120px;
+    background: linear-gradient(45deg, #fecfef, #fbc2eb);
+    border-radius: 10px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+}
+
+.event-date {
+    background: #ff9a9e;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 10px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
